@@ -32,7 +32,7 @@ export const getTicketById = (req: Request, res: Response): void => {
     if(isNaN(ticketId) || ticketId <= 0){
         res.status(HTTP_STATUS.BAD_REQUEST).json({message: "Bad Request."});
         return;
-    }
+    };
 
     const selectedTicket: SupportTicketInterface | undefined = getTicketByIdService(ticketId);
 

@@ -90,7 +90,6 @@ export const createTicket = (req: Request, res: Response): void => {
 
 export const updateTicket = (req: Request, res: Response): void => {
     const selectedTicketId: number = Number(req.params.id);
-
     if(isNaN(selectedTicketId) || selectedTicketId <= 0){
         res.status(HTTP_STATUS.BAD_REQUEST).json({message: "Bad Request."});
         return;   
@@ -101,17 +100,17 @@ export const updateTicket = (req: Request, res: Response): void => {
     const description: string = req.body.description;
     const priority: string = req.body.priority;
     const status: string = req.body.status;
-    const createdAt:string =  req.body.createdAt;
 
     if(!(priority in PriorityBaseScore)){
         res.status(HTTP_STATUS.BAD_REQUEST).json({message: "Invalid priority. Must be one of: critical. high, medium, low"});
         return;
-    }
+    };
 
+    //2131
     if(!(ticketStatus.includes(status))){
         res.status(HTTP_STATUS.BAD_REQUEST).json({message: "Invalid status. Must be one of: open, in-progress, resolved"});
         return;
-    }
+    };
 
     const updatedTicket: SupportTicketInterface[] | undefined =  updateTicketService(selectedTicketId, id, title, description, priority, status, createdAt);
 

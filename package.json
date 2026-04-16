@@ -1,0 +1,48 @@
+{
+  "name": "comp_3018_assignment_2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "ts-node src/server.ts",
+    "build": "tsc",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rrc-w2025-sbeitenger/comp_3018_assignment_2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/rrc-w2025-sbeitenger/comp_3018_assignment_2/issues"
+  },
+  "homepage": "https://github.com/rrc-w2025-sbeitenger/comp_3018_assignment_2#readme",
+  "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/jest": "^30.0.0",
+    "@types/joi": "^17.2.2",
+    "@types/mocha": "^10.0.10",
+    "@types/morgan": "^1.9.10",
+    "@types/node": "^25.2.0",
+    "@types/supertest": "^6.0.3",
+    "jest": "^30.2.0",
+    "supertest": "^7.2.2",
+    "ts-jest": "^29.4.6",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "express": "^5.2.1",
+    "firebase-admin": "^13.7.0",
+    "joi": "^18.0.2",
+    "morgan": "^1.10.1"
+  }
+}
